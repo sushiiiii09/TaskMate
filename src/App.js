@@ -63,26 +63,28 @@ function App() {
   }
 
   return (
-    <>
+    <div className="bg-gradient-to-br from-orange-100 via-violet-400 to-violet-400">
       <Navbar />
-      <Drawer />
-      <br />
-      <div className="max-w-xs my-20 mx-auto">
-        <h1>
-          {numberComplete}/{numberTotal} Complete
-        </h1>
-        <h2>{getMessage()}</h2>
-        <TaskForm onAdd={addTask} />
-        {tasks.map((task, index) => (
-          <Task
-            {...task}
-            onRename={(newName) => renameTask(index, newName)}
-            onTrash={() => removeTask(index)}
-            onToggle={(done) => updateTaskDone(index, done)}
-          />
-        ))}
+      <div className="flex ">
+        <Drawer />
+        <div className="max-w-xs my-20 mx-auto ">
+          <h1>
+            {numberComplete}/{numberTotal} Complete
+          </h1>
+          <h2>{getMessage()}</h2>
+          <TaskForm onAdd={addTask} />
+          {tasks.map((task, index) => (
+            <Task
+              {...task}
+              onRename={(newName) => renameTask(index, newName)}
+              onTrash={() => removeTask(index)}
+              onToggle={(done) => updateTaskDone(index, done)}
+            />
+          ))}
+        </div>
       </div>
-    </>
+    </div>
+
     // <BrowserRouter>
     //   <div className="App bg-slate-900 min-h-screen flex ">
     //     <Routes>

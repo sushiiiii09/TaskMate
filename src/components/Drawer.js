@@ -23,17 +23,12 @@ export default function Drawer() {
   ];
   return (
     <>
-      <div className="flex bg-gradient-to-br from-orange-100 via-violet-400 to-violet-400">
+      <div className="flex ">
         <div
           className={` bg-black bg-opacity-25 backdrop-blur-xl  h-screen p-5 pt-8 ${
             open ? "w-72" : "w-20"
           }  duration-300   relative`}
         >
-          {/* {/* <BsArrowLeft
-            className={`bg-white opacity-75 text-purple-600 text-3xl rounded-full absolute -right-3 top-9  cursor-pointer ${
-              !open && "rotate-180"
-            }`} 
-          onClick={() => setOpen(!open)} />*/}
           <div className="inline-flex">
             <FaTasks
               className={`text-purple-500 text-3xl rounded cursor-pointer block float-left mr-2  duration-300 
