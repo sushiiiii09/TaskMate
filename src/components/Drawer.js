@@ -90,6 +90,7 @@ export default function Drawer() {
           </ul>
         </div>
         <div className="p-7 ">
+          {/* add more components here  */}
           <h1 className="text-2xl font-semibold"></h1>
         </div>
       </div>
