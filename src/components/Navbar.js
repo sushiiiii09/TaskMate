@@ -96,6 +96,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
+
         <div className="navbar-end ">
           <div className="dropdown dropdown-end shadow-lg">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar  ">
