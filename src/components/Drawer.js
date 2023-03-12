@@ -1,9 +1,14 @@
 import { useState } from "react";
 
 import React from "react";
-import { BsArrowLeft, BsSearch, BsFillCloudSunFill } from "react-icons/bs";
+import {
+  BsSearch,
+  BsFillCloudSunFill,
+  BsFillArchiveFill,
+} from "react-icons/bs";
 import { MdToday, MdNotificationImportant } from "react-icons/md";
 import { AiFillEnvironment, AiFillSetting } from "react-icons/ai";
+import { FaTasks } from "react-icons/fa";
 import { icons } from "react-icons";
 
 export default function Drawer() {
@@ -13,39 +18,37 @@ export default function Drawer() {
     { title: "Today", icon: <MdToday /> },
     { title: "My Day", icon: <BsFillCloudSunFill /> },
     { title: "Important", icon: <MdNotificationImportant /> },
-    // { title: "media", spacing: true },
-    // { title: "indox" },
+    { title: "Archive", icon: <BsFillArchiveFill /> },
+
     { title: "settings", spacing: true, icon: <AiFillSetting /> },
   ];
   return (
     <>
-      <div className="flex">
+      <div className="flex bg-gradient-to-br from-orange-100 via-violet-400 to-violet-400">
         <div
-          className={` bg-blue-900 h-screen p-5 pt-8 ${
+          className={` bg-black bg-opacity-25 backdrop-blur-xl  h-screen p-5 pt-8 ${
             open ? "w-72" : "w-20"
           }  duration-300   relative`}
         >
-          <BsArrowLeft
-            className={`bg-white text-blue-900 text-3xl rounded-full absolute -right-3 top-9 border border-black  cursor-pointer ${
+          {/* {/* <BsArrowLeft
+            className={`bg-white opacity-75 text-purple-600 text-3xl rounded-full absolute -right-3 top-9  cursor-pointer ${
               !open && "rotate-180"
-            }`}
-            onClick={() => setOpen(!open)}
-          />
+            }`} 
+          onClick={() => setOpen(!open)} />*/}
           <div className="inline-flex">
-            <AiFillEnvironment
-              className={`bg-amber-300 text-4xl rounded cursor-pointer block float-left mr-2  duration-300 ${
-                open && "rotate-[360deg]"
-              }`}
+            <FaTasks
+              className={`text-purple-600 text-4xl rounded cursor-pointer block float-left mr-2  duration-300 
+              
+              
+              `}
+              onClick={() => setOpen(!open)}
             />
             <h1
               className={`text-white origin-left font-medium text-2xl duration-300 ${
                 !open && "scale-0"
               }`}
-            >
-              TODAY
-            </h1>
+            ></h1>
           </div>
-
           <div
             className={`flex items-center rounded-md bg-gray-500 mt-6  ${
               !open ? "px-2.5" : "px-4"
@@ -62,13 +65,12 @@ export default function Drawer() {
               } `}
             />
           </div>
-
-          <ul className="pt-2">
+          <ul className="pt-2 ">
             {Menus.map((menu, index) => (
               <>
                 <li
                   key={index}
-                  className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-200 rounded-md ${
+                  className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-200 hover:text-purple-600 rounded-md ${
                     menu.spacing ? "mt-20" : "mt-6"
                   }`}
                 >
@@ -87,7 +89,7 @@ export default function Drawer() {
             ))}
           </ul>
         </div>
-        <div className="p-7">
+        <div className="p-7 ">
           <h1 className="text-2xl font-semibold">HomePage</h1>
         </div>
       </div>
