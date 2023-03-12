@@ -37,22 +37,22 @@ export default function Drawer() {
           onClick={() => setOpen(!open)} />*/}
           <div className="inline-flex">
             <FaTasks
-              className={`text-purple-600 text-4xl rounded cursor-pointer block float-left mr-2  duration-300 
+              className={`text-purple-500 text-3xl rounded cursor-pointer block float-left mr-2  duration-300 
               
               
               `}
               onClick={() => setOpen(!open)}
             />
-            <h1
+            {/* <h1
               className={`text-white origin-left font-medium text-2xl duration-300 ${
                 !open && "scale-0"
               }`}
-            ></h1>
+            ></h1> */}
           </div>
           <div
-            className={`flex items-center rounded-md bg-gray-500 mt-6  ${
-              !open ? "px-2.5" : "px-4"
-            } py-2`}
+            className={`flex items-center rounded-md ${
+              open ? "bg-gray-300" : " "
+            } mt-6  ${!open ? "px-2.5" : "px-4"} py-2`}
           >
             <BsSearch
               className={`text-white text-lg block float-left cursor-pointer $(open && "mr-2") `}
@@ -70,7 +70,7 @@ export default function Drawer() {
               <>
                 <li
                   key={index}
-                  className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-200 hover:text-purple-600 rounded-md ${
+                  className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-200 hover:text-purple-600 rounded-md ${
                     menu.spacing ? "mt-20" : "mt-6"
                   }`}
                 >
@@ -90,7 +90,7 @@ export default function Drawer() {
           </ul>
         </div>
         <div className="p-7 ">
-          <h1 className="text-2xl font-semibold">HomePage</h1>
+          <h1 className="text-2xl font-semibold"></h1>
         </div>
       </div>
     </>
