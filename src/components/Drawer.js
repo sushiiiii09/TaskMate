@@ -19,7 +19,6 @@ export default function Drawer() {
     { title: "My Day", icon: <BsFillCloudSunFill /> },
     { title: "Important", icon: <MdNotificationImportant /> },
     { title: "Archive", icon: <BsFillArchiveFill /> },
-
     { title: "settings", spacing: true, icon: <AiFillSetting /> },
   ];
   return (
