@@ -1,26 +1,27 @@
 
-form{
+/* form{
   border: 3px solid #30313D;
   border-radius: 10px;
   padding: 5px;
   display:flex;
-}
-form input[type="text"] {
+}  */
+  /* form input[type="text"] {
   background: none;
   color:#fff;
-  border:0;
+  border:1px;
+  border-color: black;
   padding: 0 8px;
   display:block;
   width: 100%;
-}
+} 
 form button{
   background-color: #61DAFB;
   border:0;
   border-radius: 6px;
   cursor:pointer;
-}
+} */
 
-div.task{
+/* div.task{
   background-color: #30313D;
   border-radius: 10px;
   padding: 5px 9px;
@@ -28,22 +29,23 @@ div.task{
   display:flex;
   align-items: center;
   transition: opacity .3s linear;
-}
-div.task svg{
+} */
+/* div.task svg{
   height: 20px;
-  margin-right: 6px;
-  fill: #61DAFB;
-}
-div.task.done{
+  /* margin-right: 6px; */
+  /* fill: #61DAFB; */
+
+
+/* div.task.done{
   opacity: 0.3;
-}
-div.task-name, div.task form{
+} */
+/* div.task-name, div.task form{
   flex-grow:1;
-}
-div.task span{
+} */
+/* div.task span{
   position:relative;
-}
-div.task span:before{
+} */
+/* div.task span:before{
   content:'';
   display:block;
   width:0;
@@ -52,32 +54,32 @@ div.task span:before{
   position:absolute;
   top: 10px;
   transition: width .1s linear;
-}
-div.task.done span:before{
+} */
+/* div.task.done span:before{
   width: 100%;
-}
+} */
 
-h1, h2{
+/* h1, h2{
   text-align: center;
-}
+} */
 
-div.checkbox{
+/* div.checkbox{
   display:flex;
   align-items: center;
-}
+} */
 
-button.trash{
+/* button.trash{
   background:none;
   border:none;
   display:flex;
   cursor:pointer;
-}
-button.trash svg{
+} */
+/* button.trash svg{
   fill: #888;
   height: 14px;
-}
-div.task input{
+} */
+/* div.task input{
   border: 2px solid #555;
   border-radius:5px;
   padding: 2px 4px;
-}
+} */

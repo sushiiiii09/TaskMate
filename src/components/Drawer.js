@@ -7,7 +7,7 @@ import {
   BsFillArchiveFill,
 } from "react-icons/bs";
 import { MdToday, MdNotificationImportant } from "react-icons/md";
-import { AiFillEnvironment, AiFillSetting } from "react-icons/ai";
+import { AiFillSetting } from "react-icons/ai";
 import { FaTasks } from "react-icons/fa";
 import { icons } from "react-icons";
 
@@ -19,14 +19,14 @@ export default function Drawer() {
     { title: "My Day", icon: <BsFillCloudSunFill /> },
     { title: "Important", icon: <MdNotificationImportant /> },
     { title: "Archive", icon: <BsFillArchiveFill /> },
-    { title: "settings", spacing: true, icon: <AiFillSetting /> },
+    { title: "Settings", spacing: true, icon: <AiFillSetting /> },
   ];
   return (
     <>
       <div className="flex ">
         <div
           className={` bg-black bg-opacity-25 backdrop-blur-xl  h-screen p-5 pt-8 ${
-            open ? "w-72" : "w-20"
+            open ? "w-40" : "w-20"
           }  duration-300   relative`}
         >
           <div className="inline-flex">

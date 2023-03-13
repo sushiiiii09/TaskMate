@@ -34,6 +34,7 @@ function App() {
 
   function updateTaskDone(taskIndex, newDone) {
     setTasks((prev) => {
+      //ask arnav what is this ...prev
       const newTasks = [...prev];
       newTasks[taskIndex].done = newDone;
       return newTasks;
@@ -41,6 +42,7 @@ function App() {
   }
 
   const numberComplete = tasks.filter((t) => t.done).length;
+  //local storage mei jo task hai uska length
   const numberTotal = tasks.length;
 
   function getMessage() {
@@ -63,15 +65,16 @@ function App() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-orange-100 via-violet-400 to-violet-400">
+    // <div className="bg-gradient-to-br from-orange-100 via-violet-400 to-violet-400">
+    <div className="bg-[#d8d3fc]">
       <Navbar />
       <div className="flex ">
         <Drawer />
-        <div className="max-w-xs my-20 mx-auto ">
-          <h1>
-            {numberComplete}/{numberTotal} Complete
+        <div className="max-w-xs my-20 mx-auto space-y-3">
+          <h1 className="text-center text-5xl text-black">
+            {numberComplete}/{numberTotal} Completed
           </h1>
-          <h2>{getMessage()}</h2>
+          <h2 className="text-center text-black text-2xl">{getMessage()}</h2>
           <TaskForm onAdd={addTask} />
           {tasks.map((task, index) => (
             <Task
