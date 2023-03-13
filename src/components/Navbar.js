@@ -14,7 +14,7 @@ export default function Navbar() {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-2">
+          <ul className="menu menu-horizontal text-lg font-light px-2">
             <li>
               <a className=" hover:text-purple-600">Todo</a>
             </li>

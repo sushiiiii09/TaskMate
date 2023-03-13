@@ -6,26 +6,30 @@ export default function Task({ name, done, onToggle, onTrash, onRename }) {
   return (
     <div
       className={
-        "task bg-white rounded-lg p-1.5 md:p-3 mt-5 flex transition-opacity duration-300 " +
+        "task bg-white rounded-lg p-2 border-[#f0abfc] border-2 md:p-3 mt-5 flex transition-opacity duration-300 " +
         (done ? "opacity-50" : "")
       }
     >
       <Checkbox checked={done} onClick={() => onToggle(!done)} />
       {!editMode && (
-        <div className="task-name" onClick={() => setEditMode((prev) => !prev)}>
+        <div
+          className="task-name text-black"
+          onClick={() => setEditMode((prev) => !prev)}
+        >
           <span>{name}</span>
         </div>
       )}
+
       {editMode && (
         <form
-          className="border-2 border-purple-600 rounded-lg p-1 flex"
+          className=" border-purple-300 rounded-lg p-0 flex"
           onSubmit={(ev) => {
             ev.preventDefault();
             setEditMode(false);
           }}
         >
           <input
-            className="bg-transparent text-black border-0 px-8 block w-full"
+            className="bg-transparent text-black block w-full"
             type="text"
             value={name}
             onChange={(ev) => onRename(ev.target.value)}
