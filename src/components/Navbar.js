@@ -47,13 +47,15 @@ export default function Navbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow-lg bg-base-100 rounded-box w-52 "
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow-lg text-black bg-white rounded-box w-52 "
             >
               <li>
-                <a className=" hover:text-purple-600">ToDo</a>
+                <a className=" hover:text-purple-600 hover:bg-[#d5c8fa]">
+                  ToDo
+                </a>
               </li>
               <li tabIndex={0}>
-                <a className="justify-between hover:text-purple-600">
+                <a className="justify-between hover:text-purple-600 hover:bg-[#d5c8fa]">
                   Projects
                   {/* <svg
                     className="fill-current"
@@ -75,7 +77,9 @@ export default function Navbar() {
                 </ul> */}
               </li>
               <li>
-                <a className=" hover:text-purple-600">Team</a>
+                <a className=" hover:text-purple-600 hover:bg-[#d5c8fa]">
+                  Team
+                </a>
               </li>
             </ul>
           </div>
@@ -88,19 +92,21 @@ export default function Navbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2  text-black shadow bg-white rounded-box w-52"
             >
               <li>
-                <a className="justify-between hover:text-purple-600">
+                <a className="justify-between hover:text-purple-600 hover:bg-[#d5c8fa]">
                   Profile
-                  <span className="badge">New</span>
+                  <span className="badge bg-white hover:text-white hover:bg-purple-400">
+                    New
+                  </span>
                 </a>
               </li>
+
               <li>
-                <a className="hover:text-purple-600">Settings</a>
-              </li>
-              <li>
-                <a className="hover:text-purple-600">Logout</a>
+                <a className="hover:text-purple-600 hover:bg-[#d5c8fa]">
+                  Logout
+                </a>
               </li>
             </ul>
           </div>

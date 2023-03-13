@@ -22,14 +22,14 @@ export default function Task({ name, done, onToggle, onTrash, onRename }) {
 
       {editMode && (
         <form
-          className=" border-purple-300 rounded-lg p-0 flex"
+          className=" border-purple-300 rounded-lg flex"
           onSubmit={(ev) => {
             ev.preventDefault();
             setEditMode(false);
           }}
         >
           <input
-            className="bg-transparent text-black block w-full"
+            className="bg-transparent border-2  border-purple-100 rounded-lg ml-2 text-black block w-full"
             type="text"
             value={name}
             onChange={(ev) => onRename(ev.target.value)}

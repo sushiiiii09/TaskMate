@@ -41,18 +41,19 @@ function App() {
   }
 
   const numberComplete = tasks.filter((t) => t.done).length;
+
   //local storage mei jo task hai uska length
   const numberTotal = tasks.length;
 
   function getMessage() {
     const percentage = (numberComplete / numberTotal) * 100;
     if (percentage === 0) {
-      return "Try to do at least one! 🙏";
+      return "Try to do at least one!😠";
     }
     if (percentage === 100) {
-      return "Nice job for today! 🏝";
+      return "Nice job for today!🙌🏻";
     }
-    return "Keep it going 💪🏻";
+    return "Keep going🥹";
   }
 
   function renameTask(index, newName) {
@@ -70,11 +71,13 @@ function App() {
         <Drawer />
 
         <div className="my-20 mx-auto space-y-3 bg-[#d8d3fc]">
-          <h2 className="text-center sm:text-5xl text-2xl  text-black">
-            {numberComplete}/{numberTotal} Completed
+          <h2 className="text-center sm:text-5xl text-2xl text-Logo text-black">
+            {numberComplete}/{numberTotal} completed
           </h2>
-          <h2 className="text-center text-black text-2xl">{getMessage()}</h2>
-
+          <h2 className="text-center text-black text-xl pb-2">
+            {getMessage()}
+          </h2>
+          <TaskForm onAdd={addTask} />
           {tasks.map((task, index) => (
             <Task
               {...task}
@@ -83,7 +86,6 @@ function App() {
               onToggle={(done) => updateTaskDone(index, done)}
             />
           ))}
-          <TaskForm onAdd={addTask} />
         </div>
       </div>
     </div>
