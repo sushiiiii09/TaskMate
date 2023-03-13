@@ -13,7 +13,7 @@ import { AiFillSetting } from "react-icons/ai";
 import { icons } from "react-icons";
 
 export default function Drawer() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const Menus = [
     { title: "Today", icon: <MdToday /> },
