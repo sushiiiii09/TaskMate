@@ -34,7 +34,6 @@ function App() {
 
   function updateTaskDone(taskIndex, newDone) {
     setTasks((prev) => {
-      //ask arnav what is this ...prev
       const newTasks = [...prev];
       newTasks[taskIndex].done = newDone;
       return newTasks;
@@ -65,13 +64,13 @@ function App() {
   }
 
   return (
-    <div className="bg-[#d8d3fc]">
+    <div className="bg-[#d8d3fc] overflow-x-hidden ">
       <Navbar />
-      <div className="flex ">
+      <div className="flex bg-[#d8d3fc]">
         <Drawer />
 
-        <div className="max-w-md my-20 mx-auto space-y-3">
-          <h2 className="text-center text-5xl text-black">
+        <div className="my-20 mx-auto space-y-3 bg-[#d8d3fc]">
+          <h2 className="text-center sm:text-5xl text-2xl  text-black">
             {numberComplete}/{numberTotal} Completed
           </h2>
           <h2 className="text-center text-black text-2xl">{getMessage()}</h2>

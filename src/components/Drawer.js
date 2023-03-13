@@ -24,7 +24,7 @@ export default function Drawer() {
   ];
   return (
     <>
-      <div className="flex pt-5">
+      <div className="flex pt-5 z-10">
         <div
           className={` bg-white bg-opacity-25 backdrop-blur-md h-screen rounded-lg px-5 pt-10 ${
             open ? "w-40" : "w-20"
@@ -81,9 +81,6 @@ export default function Drawer() {
               </>
             ))}
           </ul>
-        </div>
-        <div className="p-7 ">
-          <h1 className="text-2xl font-semibold"></h1>
         </div>
       </div>
     </>

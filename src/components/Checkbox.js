@@ -2,7 +2,7 @@ export default function Checkbox({ checked = false, onClick }) {
   return (
     <div onClick={onClick}>
       {!checked && (
-        <div className="checkbox unchecked checkbox flex justify-items-center items-center mr-3 ml-2 ">
+        <div className="checkbox unchecked  flex justify-items-center items-center mr-3 ml-2 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -13,7 +13,7 @@ export default function Checkbox({ checked = false, onClick }) {
         </div>
       )}
       {checked && (
-        <div className="checkbox checked checkbox flex justify-items-center items-center mr-3 ml-2">
+        <div className="checkbox checked flex justify-items-center items-center mr-3 ml-2">
           <svg
             className="fill-fuchsia-400"
             xmlns="http://www.w3.org/2000/svg"
