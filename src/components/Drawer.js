@@ -10,7 +10,7 @@ import { BiTask } from "react-icons/bi";
 import { MdToday, MdNotificationImportant } from "react-icons/md";
 import { AiFillSetting } from "react-icons/ai";
 
-import { icons } from "react-icons";
+// import { icons } from "react-icons";
 
 export default function Drawer() {
   const [open, setOpen] = useState(false);
@@ -36,11 +36,6 @@ export default function Drawer() {
               `}
               onClick={() => setOpen(!open)}
             />
-            {/* <h1
-              className={`text-white origin-left font-medium text-2xl duration-300 ${
-                !open && "scale-0"
-              }`}
-            ></h1> */}
           </div>
           <div
             className={`flex items-center rounded-md ${

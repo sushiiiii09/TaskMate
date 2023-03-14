@@ -4,9 +4,7 @@ import Navbar from "./components/Navbar";
 import TaskForm from "./components/TaskForm";
 import Task from "./components/Task";
 import { useEffect, useState } from "react";
-// import Drawer from "./components/Home";
-// import { Routes, Route, BrowserRouter } from "react-router-dom";
-// import Home from "./components/Home";
+
 function App() {
   const [tasks, setTasks] = useState([]);
 
@@ -43,6 +41,7 @@ function App() {
   const numberComplete = tasks.filter((t) => t.done).length;
 
   //local storage mei jo task hai uska length
+
   const numberTotal = tasks.length;
 
   function getMessage() {
@@ -89,14 +88,6 @@ function App() {
         </div>
       </div>
     </div>
-
-    // <BrowserRouter>
-    //   <div className="App bg-slate-900 min-h-screen flex ">
-    //     <Routes>
-    //       <Route path="/" element={<Home />} />
-    //     </Routes>
-    //   </div>
-    // </BrowserRouter>
   );
 }
 

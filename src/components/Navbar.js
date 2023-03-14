@@ -67,14 +67,6 @@ export default function Navbar() {
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg> */}
                 </a>
-                {/* <ul className="p-2 shadow-lg">
-                  <li>
-                    <a className=" hover:text-purple-600">Project-1</a>
-                  </li>
-                  <li>
-                    <a className=" hover:text-purple-600">Project-2</a>
-                  </li>
-                </ul> */}
               </li>
               <li>
                 <a className=" hover:text-purple-600 hover:bg-[#d5c8fa]">
