@@ -46,13 +46,17 @@ function App() {
 
   function getMessage() {
     const percentage = (numberComplete / numberTotal) * 100;
-    if (percentage === 0) {
-      return "Try to do at least one!😠";
+    if (numberTotal === 0) {
+      return "Enter your Tasks for today";
+    } else {
+      if (percentage === 0) {
+        return "Try to do at least one!😠";
+      }
+      if (percentage === 100) {
+        return "Nice job for today!🙌🏻";
+      }
+      return "Keep going🥹";
     }
-    if (percentage === 100) {
-      return "Nice job for today!🙌🏻";
-    }
-    return "Keep going🥹";
   }
 
   function renameTask(index, newName) {
@@ -76,7 +80,9 @@ function App() {
           <h2 className="text-center text-black text-xl pb-2">
             {getMessage()}
           </h2>
+
           <TaskForm onAdd={addTask} />
+
           {tasks.map((task, index) => (
             <Task
               {...task}
