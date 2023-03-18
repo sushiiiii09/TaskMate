@@ -9,14 +9,14 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    if (tasks.length === 0) return;
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
-  useEffect(() => {
     const tasks = JSON.parse(localStorage.getItem("tasks"));
     setTasks(tasks || []);
   }, []);
+
+  useEffect(() => {
+    if (tasks.length === 0) return;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   function addTask(name) {
     setTasks((prev) => {
@@ -33,7 +33,7 @@ function App() {
   function updateTaskDone(taskIndex, newDone) {
     setTasks((prev) => {
       const newTasks = [...prev];
-      newTasks[taskIndex].done = newDone;
+      newTasks[taskIndex].done = newDone; // kwsdfghjk
       return newTasks;
     });
   }
@@ -68,7 +68,7 @@ function App() {
   }
 
   return (
-    <div className="bg-[#d8d3fc] overflow-x-hidden ">
+    <div className="bg-addTask[#d8d3fc] overflow-x-hidden ">
       <Navbar />
       <div className="flex bg-[#d8d3fc]">
         <Drawer />
